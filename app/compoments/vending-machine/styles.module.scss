@@ -1,0 +1,67 @@
+.container {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.instructions {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.products {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: auto auto;
+
+    .item {
+        font-weight: normal;
+        display: block;
+        cursor: pointer;
+        text-align: center;
+        padding: 2rem;
+        border-radius: 1rem;
+        
+        .figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .figcaption {
+            margin: 0;
+            line-height: 1.15;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: normal;
+            display: block;
+        }
+
+        input[type="radio"] {
+            display: none;
+
+            &:checked + .name {
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    @media screen and (min-width: 767px) {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+.coins {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: normal;
+}
